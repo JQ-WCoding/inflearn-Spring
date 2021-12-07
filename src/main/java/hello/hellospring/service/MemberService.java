@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+// @Service
 public class MemberService {
 
     // private final MemberRepository memberRepository = new MemoryMemberRepository();
@@ -16,7 +16,7 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     // Spring Container 에 있는 구현체를 주입해서 넣어준다
-    @Autowired
+    // @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
