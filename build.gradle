@@ -18,6 +18,8 @@ dependencies {
     // starter-web 이 필요로 하는 라이브러리들이 전부 가져와져서 External Libraries 내에 모두 불러온다 -> 의존관계이다
     // embed 내장된 프로그램 -> 서버에 전부 웹을 위해 필요한 것들이 들어가 있다는 표현
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
