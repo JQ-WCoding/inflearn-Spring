@@ -27,12 +27,19 @@ public class MemberService {
      * 회원가입
      */
     public Long join(Member member) {
+        // long start = System.currentTimeMillis();
         // 같은 이름의 회원은 안된다면? command + option + v
         // Optional 안의 여러 메서드를 사용가능 (Optional 은 null 인 가능성이 있는 경우 주로 사용한다)
-        validateDuplicatedMember( member );
+        // try {
+            validateDuplicatedMember( member );
 
-        memberRepository.save( member );
-        return member.getId();
+            memberRepository.save( member );
+            return member.getId();
+        // } finally {
+        //     long finish = System.currentTimeMillis();
+        //     long timeMs = finish - start;
+        //     System.out.println( "join = " + timeMs + "ms" );
+        // }
     }
 
     private void validateDuplicatedMember(Member member) {
@@ -42,10 +49,19 @@ public class MemberService {
         // } );
 
         // 위와 동일하지만 더 깔끔하게 사용가능
+
+        // long start = System.currentTimeMillis();
+
+        // try {
         memberRepository.findByName( member.getName() )
                 .ifPresent( m -> {
                     throw new IllegalStateException( "이미 존재하는 회원" );
                 } );
+        // } finally {
+        //     long finish = System.currentTimeMillis();
+        //     long timeMs = finish - start;
+        //     System.out.println( "findMembers = " + timeMs + "ms" );
+        // }
     }
 
     /**
