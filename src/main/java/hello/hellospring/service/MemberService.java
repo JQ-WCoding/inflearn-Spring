@@ -17,7 +17,8 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    // Spring Container 에 있는 구현체를 주입해서 넣어준다
+    // Spring Container 에 있는 구현체를 주입해서 넣어준다다
+    // 필드 인젝션으로 @Autowired 보다 생성자를 통한 주입이 더 좋은 방법일 수 있다
     // @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;

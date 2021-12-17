@@ -40,6 +40,8 @@ public class SpringConfig {
         return new MemberService( memberRepository );
     }
 
+
+    /* 의존성 주입을 외부에서 간단하게 붙였다 때는 형식으로 진행하여 해당 @Bean 만으로 간단하게 레포지토리를 변경가능하도록 한다 */
     // @Bean
     // public MemberRepository memberRepository() {
     //     // return new MemoryMemberRepository();
