@@ -28,6 +28,7 @@ public class JpaMemberRepository implements MemberRepository {
 
     @Override
     public Optional<Member> findByName(String name) {
+        // jpa 쿼리문
         List<Member> result = em.createQuery( "select m from Member m where m.name = :name", Member.class )
                 .setParameter( "name", name ).getResultList();
 
@@ -36,6 +37,7 @@ public class JpaMemberRepository implements MemberRepository {
 
     @Override
     public List<Member> findAll() {
+        // 전체 쿼리에서 select 문으로 검색해오기 where 문 없음
         return em.createQuery( "select m from Member m", Member.class )
                 .getResultList();
     }
