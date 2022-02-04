@@ -10,6 +10,10 @@ import java.util.List;
 import java.util.Optional;
 
 // @Service
+// Transactional 은 해당 클래스의 모든 메소드가 error 발생시 rollback 하는 방법이다
+// 이제는 알거 같다 -> sql 에서 transaction 관리하는 것을 자바에서 할 수 있게 하는 것
+// sql 에서 transaction 을 이용해 문제가 생길 부분을 rollback tran 했던 것과 같다
+// 클래스 말고 필요하다면 데이터를 수정하는 메소드만 따로 걸어둬도 상관없다
 @Transactional
 public class MemberService {
 
