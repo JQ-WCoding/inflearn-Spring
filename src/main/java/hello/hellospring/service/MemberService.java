@@ -47,6 +47,10 @@ public class MemberService {
         // }
     }
 
+    /**
+     * 중복체크
+     * @param member
+     */
     private void validateDuplicatedMember(Member member) {
         // Optional<Member> result = memberRepository.findByName( member.getName() );
         // result.ifPresent( m -> {

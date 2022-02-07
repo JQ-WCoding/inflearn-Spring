@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+// controller 는 url 을 이용해 메소드에 접근한다
 @Controller
 public class HelloController {
     @GetMapping ( "hello" )
