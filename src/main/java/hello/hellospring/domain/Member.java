@@ -8,10 +8,13 @@ public class Member {
     // id 는 임의의 값 (시스템이 가지고 있는 데이터 구분용 아이디)
     @Id
     @GeneratedValue ( strategy = GenerationType.IDENTITY )
+    @Column ( name = "ID" )
     private Long id;
 
+    // 기본적으로 @Column 을 지정해주지 않으면 대소문자 구분하지 않고 같은 컬럼을 바라본다 -> 하지만, 대소문자 구분을 하는 sql 의 경우에는 대소문자의 구분도 확실하게 해주어야 한다.
     private String name;
 
+    // Getter Setter
     public Long getId() {
         return id;
     }
