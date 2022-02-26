@@ -7,6 +7,8 @@ import javax.persistence.*;
 public class Member {
     // id 는 임의의 값 (시스템이 가지고 있는 데이터 구분용 아이디)
     @Id
+    // DB의 IDENTITY 이용 -> 기본키 생성을 DB에 위임
+    // DB가 알아서 AUTO INCREMENT 해준다
     @GeneratedValue ( strategy = GenerationType.IDENTITY )
     @Column ( name = "ID" )
     private Long id;
