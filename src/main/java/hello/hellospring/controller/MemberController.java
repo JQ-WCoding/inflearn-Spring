@@ -39,6 +39,7 @@ public class MemberController {
         return "members/createMemberForm";
     }
 
+    // 같은 url을 사용하지만, post와 get을 구분지어 url 다양한 활용을 줄인다.
     @PostMapping ( "/members/new" )
     public String create(MemberForm memberForm) {
         Member member = new Member();
