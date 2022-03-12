@@ -17,6 +17,8 @@ import java.util.Optional;
 @Service
 public class MemberService {
 
+    //MemberRepository 를 구현되어 있는 어떤 것도 연동 될 수 있도록 지정
+
     // private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     private final MemberRepository memberRepository;
